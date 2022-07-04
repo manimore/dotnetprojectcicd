@@ -19,4 +19,9 @@ steps:
     packageType: 'sdk'
     version: '6.0.x'
     installationPath: $(Agent.ToolsDirectory)/dotnet
+- task: DotNetCoreCLI@2
+  displayName: retoring application
+  inputs:
+    command: 'restore'
+    projects: '**/WebApp/*.csproj'
 
